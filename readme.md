@@ -1,13 +1,17 @@
 # Ant Colony Optimzation for Traveling Salesman
 
 ## Summary
-GUI Program to simulate both a naive and ant colony optimized solution to the traveling salesman problem. A set of points in 2d space are randomly generated and different paths are tested. The best path is painted onto the screen.
+Java GUI Program to simulate both a naive and ant colony optimized solution to the traveling salesman problem. A set of points in 2d space are randomly generated and different paths are tested. The best path is painted onto the screen.
 
 ### Naive
-Statistics such as expected and elapsed time as well as total and completed paths are displayed
+The naive algorithm is a brute force search for all possible paths. Therefore, it runs in about O(n!) time, which is incredibly slow!
 
 ### ACO
-Statistics such as elapsed time as well as total and completed paths are displayed.
+The Ant Colony Optimized approach is an algorithm inspired by how ants forage for food. Ants will release pheromones to
+indicate to other ants which directions contain better resources. In this algorithm, ants will take random paths based on the strength of
+pheromones. Because variation is introduced, ants will randomly explore alternative paths, potentially finding better paths. Stronger
+paths are rewarded and weaker paths are diminished. Eventually, the ants will converge on a **local** minimum (note that the algorithm
+does not guarantee finding the most optimal path).
 
 <hr/>
 
@@ -29,4 +33,4 @@ java -cp out Main [-flags]
 * <code>-n=?</code>: A number that determines how many points to generate on the map. Defaults to 10
 * <code>-s=?</code>: The random seed that generates how many points to run. Defaults to random.
 * <code>-a=?</code>: How many ants will run in the aco algorithm. Ignored if <code>--aco</code> flag is not also specified
-* <code>-i=?</code>: How many iterations of ants will run in the aco algorithm. Ignored if <code>--aco</code> flag is not also specified
+* <code>-i=?</code>: How many generations of ants will run in the ACO algorithm. Ignored if <code>--aco</code> flag is not also specified
