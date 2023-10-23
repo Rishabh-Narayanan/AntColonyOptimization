@@ -1,3 +1,4 @@
+package src;
 
 /*
 References:
@@ -17,7 +18,7 @@ public class AcoSolution {
 	private double[][] pheremoneStrength;
 	private double[][] pheremoneUpdateBuffer;
 
-	GameState gs;
+	ColonyState gs;
 	BigInteger totalPaths;
 	BigInteger checkedPaths;
 
@@ -33,7 +34,7 @@ public class AcoSolution {
 	public AcoSolution(int seed, BigInteger totalPaths, int numAnts, Point[] pts, Execute onEachPath) {
 		r = new Random(seed); // change seed
 
-		gs = new GameState(pts);
+		gs = new ColonyState(pts);
 		checkedPaths = BigInteger.valueOf(0);
 		this.totalPaths = totalPaths;
 		this.onEachPath = onEachPath;

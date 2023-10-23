@@ -1,3 +1,4 @@
+package src;
 
 import java.math.BigInteger;
 import java.util.Random;
@@ -7,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class NaiveSolution {
-	GameState gs;
+	ColonyState gs;
 	BigInteger totalPaths;
 	BigInteger checkedPaths;
 
 	Execute onEachPath;
 
 	public NaiveSolution(BigInteger totalPaths, Point[] pts, Execute onEachPath) {
-		gs = new GameState(pts);
+		gs = new ColonyState(pts);
 		checkedPaths = BigInteger.valueOf(0);
 		this.totalPaths = totalPaths;
 		this.onEachPath = onEachPath;

@@ -1,5 +1,6 @@
+package src;
 
-public class GameState {
+public class ColonyState {
 	int n;
 	Point[] pts;
 	double[][] weights;
@@ -8,7 +9,7 @@ public class GameState {
 	int[] bestPath; // indices of 'pts' for the current best path
 	double bestPathCost;
 
-	public GameState(Point[] pts) {
+	public ColonyState(Point[] pts) {
 		this.n = pts.length;
 
 		this.pts = pts;

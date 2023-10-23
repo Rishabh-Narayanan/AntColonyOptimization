@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -54,8 +55,8 @@ public class BestGUI extends JPanel {
 	@Override
 	public void paint(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
-		double sW = (double) this.getWidth() / GameState.MAX_POINT_COORDINATE;
-		double sH = (double) this.getHeight() / GameState.MAX_POINT_COORDINATE;
+		double sW = (double) this.getWidth() / ColonyState.MAX_POINT_COORDINATE;
+		double sH = (double) this.getHeight() / ColonyState.MAX_POINT_COORDINATE;
 		final int r = 6;
 		
 		// draw lines

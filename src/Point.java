@@ -1,3 +1,4 @@
+package src;
 
 public class Point {
 	public final int x, y;
